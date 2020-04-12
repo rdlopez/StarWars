@@ -1,0 +1,14 @@
+nav{
+    background-color: #DF0101;
+}
+
+#nav-logo{
+    text-transform: uppercase;
+}
+
+#nav-logo img {
+    border-radius: 5px;
+    padding: 5px;
+    width: 150px;
+    height: 60px;
+}
