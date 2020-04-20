@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 0;
+    margin-top: 10px;
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align: center;
+
+}
+em{
+    color: crimson;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.greeting{
+    color: yellowgreen;
+    text-transform: capitalize;
+}
+
+.image-main{
+    background-image: url("../../../assets/star-wars-background-2.jpg");
+    background-repeat: no-repeat;
+    background-color: #ddd;
+    background-size: cover;
+    height: 250px;
+    background-position: 40% 15%;
+    border-radius: 20px;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+.description-main{
+    padding-top: 0;
+    margin-top: 0;
+    /* background-color: red; */
+}
