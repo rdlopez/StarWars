@@ -13,5 +13,4 @@ export class MainItemComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

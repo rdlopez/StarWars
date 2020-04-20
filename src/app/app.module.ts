@@ -9,8 +9,10 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { MainComponent } from './Components/main/main.component';
 import { RouterModule } from '@angular/router';
-import { FilmsComponent } from './Components/films/films.component';
+import { PeopleComponent } from './Components/people/people.component';
 import { MainItemComponent } from './Components/main-item/main-item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PeopleService } from './Shared/Services/people.service';
 
 @NgModule({
   declarations: [
@@ -18,15 +20,16 @@ import { MainItemComponent } from './Components/main-item/main-item.component';
     NavbarComponent,
     FooterComponent,
     MainComponent,
-    FilmsComponent,
+    PeopleComponent,
     MainItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PeopleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
