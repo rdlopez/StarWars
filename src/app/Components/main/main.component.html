@@ -8,7 +8,13 @@
       <p>
         <span class="greeting">Bienvenido!</span> Al principal portal de <em>Star Wars </em> en la web. <br>
         En este lugar vas a encontrar la principal informaci&oacute;n del mayor clas&iacute;co del mundo cinematogr&aacute;fico.  
+        <br><br> Puedes seleccionar algúna opci&oacute;n de las siguientes para ver m&aacute;s:
       </p>
+    </div>
+    <div class="row">
+      <ng-container *ngFor="let item of menuItems">
+        <app-main-item [item]="item" class="main-item"></app-main-item>
+      </ng-container>
     </div>
   </div>
 </div>>
