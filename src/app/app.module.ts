@@ -9,13 +9,17 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { MainComponent } from './Components/main/main.component';
 import { RouterModule } from '@angular/router';
+import { FilmsComponent } from './Components/films/films.component';
+import { MainItemComponent } from './Components/main-item/main-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    FilmsComponent,
+    MainItemComponent
   ],
   imports: [
     BrowserModule,
