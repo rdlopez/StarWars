@@ -13,6 +13,8 @@ import { PeopleComponent } from './Components/people/people.component';
 import { MainItemComponent } from './Components/main-item/main-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PeopleService } from './Shared/Services/people.service';
+import { FilmService } from './Shared/Services/films.service';
+import { FilmComponent } from './Components/film/film.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { PeopleService } from './Shared/Services/people.service';
     FooterComponent,
     MainComponent,
     PeopleComponent,
-    MainItemComponent
+    MainItemComponent,
+    FilmComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { PeopleService } from './Shared/Services/people.service';
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
-  providers: [PeopleService],
+  providers: [PeopleService,FilmService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
