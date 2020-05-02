@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="row people-title">
+<div class="container" *ngIf="!selectedFilm">
+  <div class="ro  w people-title">
     <h1>Peliculas Star Wars</h1>
     <p style="text-transform: capitalize;font-size: 18px;text-align: center;">
       En esta secci&oacute;n te mostramos algunas de las m&aacute;s importantes pel&iacute;culas.<br>
@@ -12,11 +12,14 @@
               <div style="text-align: center;color:beige;">
                 <i class="medium material-icons">account_box</i>
               </div>
-              <h2 style="cursor: pointer;">{{film.title}}</h2>
+              <h2 style="cursor: pointer;" (click)="setSelectedFilm(film)">{{film.title}}</h2>
               <hr>
               <p>{{film.opening_crawl}}</p>
             </div>
           </div>
         </div>
       </div>
+</div>
+<div class="container" *ngIf="selectedFilm">
+  <app-film-detail *ngIf="selectedFilm" [film]="selectedFilm" (returnToFilms)="returnFilms($event)"></app-film-detail>
 </div>

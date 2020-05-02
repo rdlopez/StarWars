@@ -3,27 +3,21 @@ import { IFilm } from '../Models/IFilm';
 import { Observable, Subject, of, BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { IStarShip } from '../Models/IStarShip';
 
 
 @Injectable()
 
 
-export class FilmService {
-    private configUrl = 'http://swapi.py4e.com/api/films/';
+export class StarShipService {
+    private configUrl = 'http://swapi.py4e.com/api/starships/';
     constructor(private http:HttpClient) {
     }
-    getAll():Observable<IFilm[]>{
-        return this.http.get<IFilm[]>(this.configUrl)
+    getAll():Observable<IStarShip[]>{
+        return this.http.get<IStarShip[]>(this.configUrl)
          .pipe(
              map(data => data['results']),
-            catchError(this.handleError<IFilm[]>('getFilms', []))
-        )
-    }
-
-    getById(url:string):Observable<IFilm>{
-        return this.http.get<IFilm>(url)
-         .pipe(
-             map(data => data['results'])
+            catchError(this.handleError<IStarShip[]>('getStarships', []))
         )
     }
 

@@ -12,6 +12,7 @@ export class FilmComponent implements OnInit {
   constructor(private filmService:FilmService) { }
 
   films:IFilm[];
+  selectedFilm = null;
 
   ngOnInit() {
     this.getAll();
@@ -23,5 +24,12 @@ export class FilmComponent implements OnInit {
           this.films = data
       });
   })
-}
+  }
+  setSelectedFilm(film:IFilm){
+      this.selectedFilm = film;
+  }
+
+  returnFilms(returnToFilms:boolean){
+    this.selectedFilm = returnToFilms;
+  }
 }
