@@ -1,0 +1,13 @@
+.item-detail{
+    display: block;
+}
+
+h3{
+    text-transform: uppercase;font-size: 18px;
+}
+
+.btn-flat{
+    float: left;;
+    top:25%;
+    left: 30%;;
+}

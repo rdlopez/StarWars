@@ -1,30 +1,28 @@
 import {Injectable} from '@angular/core';
-import { IPeople } from '../Models/IPeople';
+import { IFilm } from '../Models/IFilm';
 import { Observable, Subject, of, BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { IStarShip } from '../Models/IStarShip';
 
 
 @Injectable()
 
 
-export class PeopleService {
-
-    private configUrl = 'http://swapi.py4e.com/api/people/';
+export class StarShipService {
+    private configUrl = 'http://swapi.py4e.com/api/starships/';
     constructor(private http:HttpClient) {
     }
-    
-    getAll():Observable<IPeople[]>{
-        return this.http.get<IPeople[]>(this.configUrl)
+    getAll():Observable<IStarShip[]>{
+        return this.http.get<IStarShip[]>(this.configUrl)
          .pipe(
              map(data => data['results']),
-            catchError(this.handleError<IPeople[]>('getPeople', []))
+            catchError(this.handleError<IStarShip[]>('getStarships', []))
         )
     }
 
     private handleError<T> (operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
-            console.error(error);
             return of(result as T);
         };
     }

@@ -14,7 +14,9 @@ import { MainItemComponent } from './Components/main-item/main-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PeopleService } from './Shared/Services/people.service';
 import { FilmService } from './Shared/Services/films.service';
+import { StarShipService } from './Shared/Services/starships.service';
 import { FilmComponent } from './Components/film/film.component';
+import { FilmDetailComponent } from './Components/film-detail-component/film-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { FilmComponent } from './Components/film/film.component';
     MainComponent,
     PeopleComponent,
     MainItemComponent,
-    FilmComponent
+    FilmComponent,
+    FilmDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { FilmComponent } from './Components/film/film.component';
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
-  providers: [PeopleService,FilmService],
+  providers: [PeopleService,FilmService,StarShipService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

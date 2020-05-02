@@ -6,7 +6,7 @@ export interface IFilm {
     release_date: string;
     characters: string[];
     planets: string[];
-    starship: string[];
+    starships: string[];
     species: string[];
     created:string;
     edited:string;

@@ -1,0 +1,30 @@
+<div class="film-detail-container">
+  <div class="row">
+    <h1>{{film.title}}</h1>
+    <a class="btn-floating btn-large waves-effect waves-light red" (click)="returnFilms()"><i class="material-icons">keyboard_return</i></a>
+  </div>
+  <div class="row">
+    <div class="col s4">
+        <h3>Descripci&oacute;n</h3>
+        <p>{{film.opening_crawl}}</p>
+        <h3>Informaci&oacute;n</h3>
+        <p>
+          <span class="item-detail">Director: {{film.director}}</span>
+          <span>Productor: {{film.producer}}</span><br>
+          <span>Fecha Estreno: {{film.release_date}}</span>
+        </p>
+    </div>
+    <div class="col s4">
+      <h3>Personajes</h3>
+        <div *ngFor="let person of matchPeople">
+            <span>{{person.name}}</span>
+        </div>
+    </div>
+    <div class="col s4">
+      <h3>Naves</h3>
+      <div *ngFor="let starShip of matchStarship">
+        <span>{{starShip.name}}</span>
+    </div>
+    </div>
+  </div>
+</div>
