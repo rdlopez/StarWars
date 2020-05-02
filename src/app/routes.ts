@@ -11,8 +11,8 @@ export const appRoutes: Routes = [
           component: MainComponent
      },
      { path: 'films', component: FilmComponent },
+     { path: 'films:id', component: FilmComponent },
      { path: 'people', component: PeopleComponent },
-     { path: 'starships', component: MainComponent },
      { path: 'vehicles', component: MainComponent },
      { path: 'species', component: MainComponent },
      { path: 'planets', component: MainComponent },

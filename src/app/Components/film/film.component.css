@@ -1,0 +1,17 @@
+.card{
+    height: 550px;
+}
+
+.card-content h1,h2,h3,h4 {
+    color: crimson;
+    font-size: 22px;
+    text-align: center;
+}
+.people-title h1{
+    text-transform: uppercase;
+    color: crimson;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-style: italic;
+}

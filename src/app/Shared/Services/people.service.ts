@@ -22,13 +22,6 @@ export class PeopleService {
         )
     }
 
-    // getAll(){
-    //     alert("Entro2" + " " + this.configUrl);
-    //     this.http.get<IPeople>(this.configUrl).pipe(
-    //         map(person => console.log(person['results']))
-    //     ).subscribe()
-    // }
-
     private handleError<T> (operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
             console.error(error);
