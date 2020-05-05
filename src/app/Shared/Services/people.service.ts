@@ -22,6 +22,14 @@ export class PeopleService {
         )
     }
 
+    getItemByUrl(url:string):Observable<IPeople>{
+        return this.http.get<IPeople>(url)
+        .pipe(
+            map(data => data),
+            catchError(this.handleError<IPeople>('getPerson', null))
+       )
+    }
+
     private handleError<T> (operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
             console.error(error);
