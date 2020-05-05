@@ -21,6 +21,14 @@ export class StarShipService {
         )
     }
 
+    getItemByUrl(url:string):Observable<IStarShip>{
+        return this.http.get<IStarShip>(url)
+        .pipe(
+            map(data => data),
+            catchError(this.handleError<IStarShip>('getStarship', null))
+       )
+    }
+
     private handleError<T> (operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
             return of(result as T);

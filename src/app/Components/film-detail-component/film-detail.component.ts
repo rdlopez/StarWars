@@ -14,11 +14,7 @@ import { StarShipService } from 'src/app/Shared/Services/starships.service';
 export class FilmDetailComponent implements OnInit {
 
   @Output() returnToFilms = new EventEmitter<boolean>();;
-
-  people:IPeople[];
   matchPeople:IPeople[] = [];
-
-  starship:IStarShip[];
   matchStarship:IStarShip[] = [];
 
   constructor(private FilmService:FilmService, private PeopleService:PeopleService,
@@ -35,24 +31,15 @@ export class FilmDetailComponent implements OnInit {
   }
 
   getAllData(){
-    this.PeopleService.getAll().subscribe(data => {
-        data.map((item, index) => {
-          this.film.characters.map((item2, intex2) =>{
-            if(item.url == item2){
-              this.matchPeople.push(item);
-            }
-          })
-        })
+          this.film.characters.map((item, intex) =>{
+            this.PeopleService.getItemByUrl(item).subscribe(data => {
+              this.matchPeople.push(data);
+            })
     })
-
-    this.StarShipService.getAll().subscribe(data => {
-      data.map((itemS, index) => {
-        this.film.starships.map((item2, intex2) =>{
-          if(itemS.url == item2){
-            this.matchStarship.push(itemS);
-          }
-        })
-      })
+        this.film.starships.map((item, intex) =>{
+          this.StarShipService.getItemByUrl(item).subscribe(data => {
+            this.matchStarship.push(data);
+          })
   })
   }
 }
