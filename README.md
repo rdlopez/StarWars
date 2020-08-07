@@ -1,4 +1,7 @@
 # StarWars
+
+[![Build Status](https://rubenvillo.visualstudio.com/RDVProjects/_apis/build/status/rdlopez.StarWars?branchName=master)](https://rubenvillo.visualstudio.com/RDVProjects/_build/latest?definitionId=1&branchName=master)
+
 Test WebHook4 - Convey
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
 
